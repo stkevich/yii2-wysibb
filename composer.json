@@ -1,0 +1,21 @@
+{
+    "name": "stkevich/yii2-wysibb",
+    "description": "WysiBB Widget for YII2",
+    "type": "yii2-extension",
+    "keywords": ["yii2"," extension"," wysibb"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stas Kevich",
+            "email": "st.kevich@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "stkevich\\wysibb\\": ""
+        }
+    }
+}
