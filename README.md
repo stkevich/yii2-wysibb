@@ -28,4 +28,9 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \stkevich\wysibb\AutoloadExample::widget(); ?>```
+$form->field($modelName, 'columnName')->widget(\stkevich\wysibb\WysiBB::className(), []);
+```
+Or use
+```php
+\stkevich\wysibb\WysiBB::widget([]);
+```
