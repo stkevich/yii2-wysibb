@@ -21,7 +21,7 @@ class WysiBB extends InputWidget
     /**
      * @var array options for html textarea
      */
-    public $inputOptions = ['class' => 'form-control'];
+    public $inputOptions = [];
 
 
     /**
@@ -30,6 +30,10 @@ class WysiBB extends InputWidget
     public function init()
     {
         parent::init();
+
+        if (!isset($this->inputOptions['class'])) {
+            $this->inputOptions['class'] = 'form-control';
+        }
 
         if (!isset($this->clientOptions['debug'])) {
             $this->clientOptions['debug'] = 'false';
