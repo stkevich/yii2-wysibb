@@ -11,7 +11,7 @@ use yii\widgets\InputWidget;
  *
  * @author Stas Kevich <st.kevich@gmail.com>
  */
-class WysiBBWidget extends InputWidget
+class WysiBB extends InputWidget
 {
     /**
      * @var array wisybb.js options
