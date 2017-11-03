@@ -36,7 +36,7 @@ class WysiBB extends InputWidget
         }
 
         if (!isset($this->clientOptions['debug'])) {
-            $this->clientOptions['debug'] = 'true';
+            $this->clientOptions['debug'] = 'false';
         }
         if (!isset($this->clientOptions['buttons'])) {
             $this->clientOptions['buttons'] = 'bold,italic,underline,|,link,|,code,quote';
