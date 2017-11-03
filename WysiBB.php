@@ -14,14 +14,14 @@ use yii\widgets\InputWidget;
 class WysiBB extends InputWidget
 {
     /**
-     * @var array wisybb.js options
+     * @var array WysiBB options
      */
     public $clientOptions = [];
 
     /**
      * @var array options for html textarea
      */
-    public $inputOptions = [];
+    public $options = [];
 
 
     /**
@@ -31,12 +31,12 @@ class WysiBB extends InputWidget
     {
         parent::init();
 
-        if (!isset($this->inputOptions['class'])) {
-            $this->inputOptions['class'] = 'form-control';
+        if (!isset($this->options['class'])) {
+            $this->options['class'] = 'form-control';
         }
 
         if (!isset($this->clientOptions['debug'])) {
-            $this->clientOptions['debug'] = 'false';
+            $this->clientOptions['debug'] = 'true';
         }
         if (!isset($this->clientOptions['buttons'])) {
             $this->clientOptions['buttons'] = 'bold,italic,underline,|,link,|,code,quote';
@@ -52,9 +52,9 @@ class WysiBB extends InputWidget
         $this->registerScript();
 
         if ($this->hasModel()) {
-            print Html::activeTextarea($this->model, $this->attribute, $this->inputOptions);
+            print Html::activeTextarea($this->model, $this->attribute, $this->options);
         } else {
-            print Html::textarea($this->name, $this->value, $this->inputOptions);
+            print Html::textarea($this->name, $this->value, $this->options);
         }
 
     }
